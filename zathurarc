@@ -1,0 +1,9 @@
+# --- NeoVim Sync Attempt ---
+set synctex true
+set synctex-editor-command "nvr --remote-silent +%{line} %{input}"
+
+# --- Behavioral Settings ---
+set scroll-step 20
+
+# --- map clipboard ---
+set selection-clipboard clipboard
