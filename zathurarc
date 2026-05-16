@@ -7,3 +7,9 @@ set scroll-step 20
 
 # --- map clipboard ---
 set selection-clipboard clipboard
+
+# --- map scroll? ---
+# map <ScrollUp> scroll up
+# map <ScrollDown> scroll down
+# map <ScrollLeft> scroll left
+# map <ScrollRight> scroll right
