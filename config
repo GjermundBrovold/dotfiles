@@ -47,5 +47,10 @@
 # # which is explained in the docs for that config option.
 # # Just for example:
 # resize-overlay-duration = 4s 200ms
+
+# Go to town in order to allow printing with out getting warnings all of the time.
 clipboard-read = allow
 clipboard-write = allow
+
+# Workaround aerosapce attempt.
+keybind = cmd+==increase_font_size:1
