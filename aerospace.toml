@@ -156,8 +156,8 @@ cmd-shift-o = ["exec-and-forget open -a Obsidian"]
 cmd-shift-z = "exec-and-forget bash -c 'id=$(aerospace list-windows --all --format \"%{window-id}|%{app-name}\" | grep -i \"zathura\" | head -n 1 | cut -d\"|\" -f1); [ -n \"$id\" ] && aerospace focus --window-id \"$id\" || zathura'"
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#layout
-cmd-period = 'layout tiles horizontal vertical'
-cmd-comma = 'layout accordion horizontal vertical'
+# cmd-period = 'layout tiles horizontal vertical'
+# cmd-comma = 'layout accordion horizontal vertical'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#focus
 cmd-h = 'focus left'
@@ -182,6 +182,7 @@ alt-shift-right = "move-workspace-to-monitor next"
 # See: https://nikitabobko.github.io/AeroSpace/commands#resize
 cmd-minus = 'resize smart -50'
 cmd-equal = 'resize smart +50'
+alt-f = 'fullscreen'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#workspace
 cmd-1 = 'workspace 1'
