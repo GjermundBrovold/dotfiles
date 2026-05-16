@@ -3,19 +3,57 @@
 # Script to update the dotfiles from my different systems in this repo.
 
 ## Common
-
-### .zshrc
-### .bsahrc
-### .aerospace
-### .zathura
+common() {
+  echo "Common"
+  ### .zshrc
+  cp ~/.zshrc ./
+  ### .bsahrc
+  cp ~/.bashrc ./
+  ### .zathura
+  cp ~/.config/zathura/zathurarc ./
+  ### ghostty
+  cp ~/.config/ghostty/config ./
+  ### tmux
+  cp ~/.tmux.conf ./
+}
 
 ## macOS
-### .aerospace
+macos() {
+  echo "macOS"
+  ### .aerospace
+  cp ~/.config/aerospace/aerospace.toml ./
+}
 
 ## Linux
-### i3
+linux() {
+  echo "linux"
+  ### i3
+}
 
 ## Windows (who gives a shit)
 
 ## Leftout
 ### nvim (own repo)
+
+main() {
+  echo "Updating .dotfiles..."
+  echo "Updating common"
+  common
+
+  echo "updating system specific"
+
+  if [ "$(uname)" == "Darwin" ]; then
+    echo "Darwin"
+    macos
+  elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
+    echo "linux"
+    linux
+  else
+    echo "No supp for your system"
+  fi
+
+  echo "Done :)"
+
+}
+
+main
