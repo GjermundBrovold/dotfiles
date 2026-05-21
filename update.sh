@@ -5,14 +5,14 @@
 ## Common
 common() {
   echo "Common"
-  ### .zshrc
-  cp ~/.zshrc ./
-  ### .bsahrc
-  cp ~/.bashrc ./
+  ### .zshrc todo find a cleaner way to handle this
+  # cp ~/.zshrc ./
+  ### .bsahrc todo find a cleaner way to handle this
+  # cp ~/.bashrc ./
   ### .zathura
   cp ~/.config/zathura/zathurarc ./
   ### ghostty
-  cp ~/.config/ghostty/config ./
+  cp ~/.config/ghostty/config.ghostty ./
   ### tmux
   cp ~/.tmux.conf ./
 }
@@ -28,6 +28,8 @@ macos() {
 linux() {
   echo "linux"
   ### i3
+  ### wayland
+  cp -r ~/.config/hypr/ ./hypr
 }
 
 ## Windows (who gives a shit)
