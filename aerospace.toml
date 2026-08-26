@@ -3,7 +3,12 @@
 config-version = 2
 
 # In i3, all workspaces are phantom
+# I do not know what this means...
 persistent-workspaces = []
+
+# Start up
+start-at-login = true
+after-startup-command = ['exec-and-forget open -n -a LinearMouse.app']
 
 # i3 doesn't have "normalizations" feature that why we disable them here.
 # But the feature is very helpful.
@@ -12,10 +17,9 @@ persistent-workspaces = []
 enable-normalization-flatten-containers = true
 enable-normalization-opposite-orientation-for-nested-containers = true
 
-# Start at login
-
 # Mouse follows focus when focused monitor changes
 on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
+focus-follows-mouse.enabled = true
 
 [mode.main.binding]
     # See: https://nikitabobko.github.io/AeroSpace/goodies#open-a-new-window-with-applescript
@@ -90,7 +94,7 @@ on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
     esc = 'mode main'
 
 
-## Multiple Monitors
+# Multiple Monitors
 [workspace-to-monitor-force-assignment]
 1 = 'main'
 2 = 'secondary'
