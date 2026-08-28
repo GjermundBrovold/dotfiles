@@ -1,0 +1,13 @@
+xkb_symbols "thinkpad_remap" {
+    include "pc"
+    include "no"
+
+    // Caps to escape
+    include "capslock(escape)"
+
+    // Map Right Alt to Backspace
+    key <RALT> { [ BackSpace, BackSpace] };
+
+    // Map PrintScreen to Right Alt (ALtGr / ISO_Level3_Shift)
+    key <PRSC> { [ ISO_Level3_Shift ] };
+};
