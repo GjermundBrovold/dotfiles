@@ -7,6 +7,7 @@ set scroll-step 20
 
 # --- map clipboard ---
 set selection-clipboard clipboard
+set selection-notification true
 
 # --- map scroll? ---
 # map <ScrollUp> scroll up
