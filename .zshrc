@@ -312,6 +312,6 @@ hidutil property --set '{"UserKeyMapping":[{"HIDKeyboardModifierMappingSrc":0x70
 ## Todo Find a way to add this for easy use with nvim.
 #/Users/gjermund/Library/Mobile Documents/iCloud~md~obsidian/Documents/TheVaultToRuleThemAll
 
-
-# Added by Antigravity
-export PATH="/Users/gjermund/.antigravity/antigravity/bin:$PATH"
+# Add qmk firmware to path
+#https://github.com/fathulfahmy/corne-keyboard
+export PATH="/Users/gjermund/.local/bin:$PATH"
