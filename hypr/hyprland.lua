@@ -44,7 +44,7 @@ local menu = "rofi -show drun"
 hl.on("hyprland.start", function()
 	hl.exec_cmd(terminal)
 	hl.exec_cmd("nm-applet")
-	hl.exec_cmd("waybar & hyprpaper & firefox")
+	hl.exec_cmd("waybar & hyprpaper")
 end)
 
 -------------------------------
@@ -177,8 +177,8 @@ hl.config({
 
 hl.config({
 	misc = {
-		force_default_wallpaper = -1, -- Set to 0 or 1 to disable the anime mascot wallpapers
-		disable_hyprland_logo = false, -- If true disables the random hyprland logo / anime girl background. :(
+		force_default_wallpaper = -0, -- Set to 0 or 1 to disable the anime mascot wallpapers
+		disable_hyprland_logo = true, -- If true disables the random hyprland logo / anime girl background. :(
 	},
 })
 
@@ -221,7 +221,7 @@ hl.device({
 ---- KEYBINDINGS ----
 ---------------------
 
-local mainMod = "SUPER" -- Sets "Windows" key as main modifier
+local mainMod = "MOD5" -- Sets SUPER sets "Windows/Command" key as main modifier, ALT sets "option"
 
 -- Example binds, see https://wiki.hypr.land/Configuring/Basics/Binds/ for more
 hl.bind(mainMod .. " + Return", hl.dsp.exec_cmd(terminal))
@@ -248,6 +248,10 @@ hl.bind(mainMod .. " + SHIFT + J", hl.dsp.window.move({ direction = "down" }))
 
 -- Start with some custome shit?
 hl.bind(mainMod .. " + CTRL + Q", hl.dsp.exec_cmd("hyprlock"))
+hl.bind(mainMod .. " + SHIFT + S", hl.dsp.layout("togglesplit"))
+
+-- Fullscreen
+hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen({ mode = "fullscreen", action = "toggle" }))
 
 -- Switch workspaces with mainMod + [0-9]
 -- Move active window to a workspace with mainMod + SHIFT + [0-9]
