@@ -28,6 +28,8 @@ auto-reload-config = false
     # See: https://nikitabobko.github.io/AeroSpace/goodies#open-a-new-window-with-applescript
     cmd-alt-ctrl-enter = 'exec-and-forget open -n -a Ghostty.app'
 
+    cmd-alt-ctrl-shift-q = 'close'
+
     # i3 wraps focus by default
     cmd-alt-ctrl-h = 'focus --boundaries-action wrap-around-the-workspace left'
     cmd-alt-ctrl-j = 'focus --boundaries-action wrap-around-the-workspace down'
